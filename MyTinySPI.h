@@ -19,9 +19,9 @@
 //USI ports and pins
 #ifdef __AVR_ATtiny85__
 #define SPI_DDR_PORT DDRB
-#define USCK_DD_PIN DDB2
-#define DO_DD_PIN DDB1      //MISO
-#define DI_DD_PIN DDB0      //MOSI
+#define USCK_DD_PIN  DDB2
+#define DO_DD_PIN    DDB1      //MISO
+#define DI_DD_PIN    DDB0      //MOSI
 #endif
 
 //SPI data modes
