@@ -1,12 +1,10 @@
-#ifndef MYTINYSPI_H
-#define MYTINYSPI_H
+#ifndef MY_TINY_SPI_H
+#define MY_TINY_SPI_H
 
-#include <stdint.h>
-#include <avr/io.h>
+/* Includes --------------------------------------------------- */
 #include <util/atomic.h>
 
-/*
- *  ATtiny85
+/* ATtiny85
  *  Master:
  *  DO (MISO)  -> SI
  *  DI (MOSI)  -> SO
@@ -28,14 +26,15 @@
 #define SPI_MODE0 0x00
 #define SPI_MODE1 0x04
 
+/* Class ------------------------------------------------------ */
 class MyTinySPI
 {
 public:
-  MyTinySPI();
-  void begin(void);
+  /* public methods */
+  void begin();
   void setDataMode(uint8_t spiDataMode);
   uint8_t transfer(uint8_t spiData);
-  void end(void);
+  void end();
 };
 
 extern MyTinySPI SPI;

@@ -1,10 +1,5 @@
 #include "MyTinySPI.h"
 
-MyTinySPI::MyTinySPI(void) 
-{
-
-}
- 
 void MyTinySPI::begin(void)
 {
   USICR = _BV(USIWM0) | _BV(USICS1) | _BV(USICLK);    // enable Three-wire mode and select clock source
@@ -35,4 +30,4 @@ void MyTinySPI::end(void)
   USICR &= ~(_BV(USIWM1) | _BV(USIWM0));
 }
 
-MyTinySPI SPI = MyTinySPI();             // instantiate a tinySPI object
+MyTinySPI SPI = MyTinySPI();           // instantiate a tinySPI object
